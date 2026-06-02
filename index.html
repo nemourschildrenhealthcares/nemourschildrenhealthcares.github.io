@@ -48,8 +48,21 @@
             font-weight: bold; 
             margin-top: 20px; 
         }
-        .btn:hover { background: #1e8a7f; }
-        
+        .appointment-form {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 30px auto;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
         footer { 
             background: #26A69A; 
             color: white; 
@@ -64,7 +77,7 @@
         <img src="IMG_20260601_142949_177.png" alt="Nemours Children Healthcare Logo" class="logo">
         <h1>Nemours Children Healthcare</h1>
         <p style="font-size: 1.4em;">Compassionate Care for Children in Florida</p>
-        <a href="#contact" class="btn">Book Appointment</a>
+        <a href="#appointment" class="btn">Book Appointment</a>
     </header>
 
     <div class="container">
@@ -76,3 +89,39 @@
         <div class="section">
             <h2>Our Services</h2>
             <div class="services">
+                <div class="card"><h3>General Pediatrics</h3><p>Routine check-ups, vaccinations, and treatment of childhood illnesses.</p></div>
+                <div class="card"><h3>Emergency Care</h3><p>24/7 pediatric emergency services.</p></div>
+                <div class="card"><h3>Specialist Clinics</h3><p>Cardiology, Neurology, Nutrition & more.</p></div>
+            </div>
+        </div>
+
+        <div class="section" id="appointment">
+            <h2>Book an Appointment</h2>
+            <div class="appointment-form">
+                <form action="https://formspree.io/f/your-email-here" method="POST">
+                    <input type="text" name="child-name" placeholder="Child's Full Name" required>
+                    <input type="number" name="child-age" placeholder="Child's Age" required>
+                    <input type="text" name="parent-name" placeholder="Parent/Guardian Name" required>
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <select name="service" required>
+                        <option value="">Select Service Needed</option>
+                        <option value="General Pediatrics">General Pediatrics</option>
+                        <option value="Emergency Care">Emergency Care</option>
+                        <option value="Specialist Clinic">Specialist Clinic</option>
+                        <option value="Vaccination">Vaccination</option>
+                    </select>
+                    <input type="date" name="preferred-date" required>
+                    <textarea name="message" placeholder="Reason for Visit / Additional Information" rows="4"></textarea>
+                    <button type="submit" class="btn" style="width:100%;">Submit Appointment Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Nemours Children Healthcare - Florida, United States</p>
+        <p>Phone: +1 (725) 882 8892</p>
+    </footer>
+</body>
+</html>
