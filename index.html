@@ -81,4 +81,96 @@
             height: 100%;
         }
         footer { 
-            background: #26A69A
+            background: #26A69A; 
+            color: white; 
+            text-align: center; 
+            padding: 40px 20px; 
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .logo { width: 220px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="IMG_20260601_142949_177.png" alt="Nemours Children Healthcare Logo" class="logo">
+        <h1>Nemours Children Healthcare</h1>
+        <p style="font-size: 1.4em;">Compassionate Care for Children in Florida</p>
+        <a href="#appointment" class="btn">Book Appointment</a>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Welcome to Our Children's Hospital</h2>
+            <p>We are a dedicated pediatric healthcare center in Kissimmee, Florida, providing high-quality, compassionate medical care for children.</p>
+        </div>
+
+        <div class="section">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="card"><h3>General Pediatrics</h3><p>Routine check-ups, vaccinations, and treatment of childhood illnesses.</p></div>
+                <div class="card"><h3>Emergency & Urgent Care</h3><p>24/7 pediatric emergency and urgent care services.</p></div>
+                <div class="card"><h3>Specialist Clinics</h3><p>Cardiology, Neurology, Nutrition & more.</p></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Our Facilities & Child-Friendly Environment</h2>
+            <div class="facilities">
+                <div class="card">
+                    <h3>Play Areas & Entertainment</h3>
+                    <p>Colorful playrooms, interactive games, and entertainment zones designed to make visits less stressful for kids.</p>
+                </div>
+                <div class="card">
+                    <h3>Family-Centered Care</h3>
+                    <p>Comfortable spaces where parents can stay with their children during treatment.</p>
+                </div>
+                <div class="card">
+                    <h3>Modern Equipment</h3>
+                    <p>State-of-the-art pediatric medical technology.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Our Location</h2>
+            <p><strong>📍 Nemours Children's Health, Osceola</strong><br>
+            750 Centerview Blvd, Kissimmee, FL 34741, United States</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.5!2d-81.432!3d28.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b5b5b5b5b5b5%3A0x0!2s750+Centerview+Blvd%2C+Kissimmee%2C+FL+34741!5e0!3m2!1sen!2sus!4v1710000000000" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="section" id="appointment">
+            <h2>Book an Appointment</h2>
+            <div class="appointment-form">
+                <form action="https://formspree.io/f/xrevzbaa" method="POST">
+                    <input type="text" name="child-name" placeholder="Child's Full Name" required>
+                    <input type="number" name="child-age" placeholder="Child's Age" required>
+                    <input type="text" name="parent-name" placeholder="Parent/Guardian Name" required>
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <select name="service" required>
+                        <option value="">Select Service Needed</option>
+                        <option value="General Pediatrics">General Pediatrics</option>
+                        <option value="Urgent Care">Urgent Care</option>
+                        <option value="Specialist Clinic">Specialist Clinic</option>
+                        <option value="Vaccination">Vaccination</option>
+                    </select>
+                    <input type="date" name="preferred-date" required>
+                    <textarea name="message" placeholder="Reason for Visit / Additional Information" rows="4"></textarea>
+                    <button type="submit" class="btn" style="width:100%;">Submit Appointment Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Nemours Children Healthcare - Kissimmee, Florida</p>
+        <p>Phone: +1 (725) 882 8892</p>
+        <p>Email: nemourschildrenhealthcare@gmail.com</p>
+    </footer>
+</body>
+</html>
