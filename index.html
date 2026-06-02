@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemours Children Healthcare - Florida</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; background: #f9f9f9; line-height: 1.6; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; background: #f9f9f9; line-height: 1.7; }
         header { background: #26A69A; color: white; padding: 30px 20px; text-align: center; }
         .logo { width: 240px; height: auto; margin: 10px auto; display: block; border-radius: 12px; }
         nav { background: #1e8a7f; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
         nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; }
         h1 { font-size: 2.5em; margin: 10px 0; }
-        h2 { color: #26A69A; border-bottom: 3px solid #26A69A; padding-bottom: 10px; }
+        h2 { color: #26A69A; border-bottom: 3px solid #26A69A; padding-bottom: 12px; }
         .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .section { margin: 80px 0; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        
-        /* Sliding Gallery */
-        .slider-container { position: relative; max-width: 100%; overflow: hidden; border-radius: 12px; }
-        .slider { display: flex; transition: transform 0.5s ease; }
-        .slider img { min-width: 100%; height: 400px; object-fit: cover; }
-        .prev, .next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: white; border: none; padding: 15px; cursor: pointer; font-size: 20px; }
-        .prev { left: 10px; }
-        .next { right: 10px; }
-
+        .section { margin: 70px 0; padding: 35px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+            column-gap: 25px;
+        }
+        .gallery img { 
+            width: 100%; 
+            border-radius: 12px; 
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15); 
+            transition: transform 0.4s;
+        }
+        .gallery img:hover { transform: scale(1.04); }
         .btn { background: #FF5722; color: white; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; }
-        input, textarea, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
+        input, textarea, select { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
         footer { background: #26A69A; color: white; text-align: center; padding: 50px 20px; }
     </style>
 </head>
@@ -53,37 +57,46 @@
         <div class="section" id="vision">
             <h2>Our Vision: Well Beyond Medicine</h2>
             <p><strong>World-class care is only part of the solution. Children need so much more.</strong></p>
-            <p>Going Well Beyond Medicine — About 80% of what affects a child’s health takes place in their home, school and community.</p>
+            <p>Going Well Beyond Medicine</p>
+            <p>About 80% of what affects a child’s health takes place in their home, school and community. Nemours Children’s is making a difference with programs that address nonmedical challenges — to create a healthier future, for all kids.</p>
+            <p><strong>Reimagining Children’s Health</strong><br>We’re transforming the idea of what it takes to keep children well, beyond medicine. Besides providing world-class clinical care, we’re addressing the social, economic, behavioral and environmental factors that affect kids every day.</p>
+            <p><strong>Collaboration Is Key</strong><br>Creating healthier generations of children depends on strategic partnerships with parents, employers, community groups, government agencies and others.</p>
+            <p><strong>Health Is More Than Health Care</strong><br>We’re advocating for health reforms, raising awareness of the issues facing young people and advancing policies with lasting impact for generations to come.</p>
+            <p><strong>Leadership in Children’s Health</strong><br>Nemours is a thought leader in transforming children’s health care.</p>
         </div>
 
         <!-- Research -->
         <div class="section" id="research">
             <h2>Pediatric Research</h2>
             <p><strong>At Nemours Children’s, research goes beyond discovery to drive impact.</strong> We study what makes children sick, what helps them heal, and what gives every child the best chance to thrive.</p>
+            <p>Life-Changing Research Happens Here. Research at Nemours is rooted in purpose. We focus on cancer, diabetes, heart disease, mental health, and everyday factors that shape children’s well-being.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
+                <div class="card"><strong>620+</strong><br>Pediatric Researchers</div>
+                <div class="card"><strong>11</strong><br>Research Centers</div>
+                <div class="card"><strong>300+</strong><br>Active Clinical Trials</div>
+                <div class="card"><strong>590+</strong><br>Peer-Reviewed Publications</div>
+            </div>
         </div>
 
-        <!-- Sliding Gallery -->
+        <!-- Gallery -->
         <div class="section" id="gallery">
             <h2>Our Hospital Campus</h2>
-            <div class="slider-container">
-                <button class="prev" onclick="moveSlide(-1)">❮</button>
-                <div class="slider" id="slider">
-                    <img src="IMG-20260603-WA0001.jpg" alt="Hospital">
-                    <img src="IMG-20260603-WA0002.jpg" alt="Hospital">
-                    <img src="IMG-20260603-WA0003.jpg" alt="Hospital">
-                    <img src="IMG-20260603-WA0004.jpg" alt="Hospital">
-                    <img src="IMG-20260603-WA0005.jpg" alt="Hospital">
-                    <img src="IMG-20260603-WA0006.jpg" alt="Hospital">
-                    <img src="IMG-20260603-WA0007.jpg" alt="Hospital">
-                </div>
-                <button class="next" onclick="moveSlide(1)">❯</button>
+            <div class="gallery">
+                <img src="IMG-20260603-WA0001.jpg" alt="Nemours Hospital">
+                <img src="IMG-20260603-WA0002.jpg" alt="Hospital View">
+                <img src="IMG-20260603-WA0003.jpg" alt="Hospital Exterior">
+                <img src="IMG-20260603-WA0004.jpg" alt="Nemours Building">
+                <img src="IMG-20260603-WA0005.jpg" alt="Campus View">
+                <img src="IMG-20260603-WA0006.jpg" alt="Modern Facility">
+                <img src="IMG-20260603-WA0007.jpg" alt="Hospital Entrance">
             </div>
         </div>
 
         <!-- Create Account -->
         <div class="section" id="account">
             <h2>Create Patient Account</h2>
-            <div class="card" style="padding:30px;">
+            <div class="card">
                 <form action="https://formspree.io/f/xrevzbaa" method="POST">
                     <input type="text" name="full-name" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Email Address" required>
@@ -96,13 +109,13 @@
         <!-- Donate -->
         <div class="section" id="donate">
             <h2>Make a Donation</h2>
-            <div class="card" style="padding:30px;">
-                <p>Your support helps us provide excellent care to children.</p>
-                <p><strong>🔒 Secured Payment:</strong> All donations are encrypted and secure.</p>
+            <div class="card">
+                <p>Your generous donation helps us provide life-changing care to children.</p>
+                <p><strong>🔒 Secured Payment:</strong> All donations are processed through encrypted, PCI-compliant systems.</p>
                 <form action="https://formspree.io/f/xrevzbaa" method="POST">
                     <input type="number" name="amount" placeholder="Donation Amount ($)" required>
                     <input type="text" name="name" placeholder="Your Name" required>
-                    <button type="submit" class="btn" style="width:100%;">Donate Securely</button>
+                    <button type="submit" class="btn" style="width:100%;">Donate Securely Now</button>
                 </form>
             </div>
         </div>
@@ -112,13 +125,15 @@
             <h2>Our Location</h2>
             <p><strong>Nemours Children's Health, Osceola - Urgent Care</strong><br>
             750 Centerview Blvd<br>
-            Kissimmee, FL 34741, United States</p>
+            Kissimmee, FL 34741<br>
+            United States</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.5!2d-81.432!3d28.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b5b5b5b5b5b5%3A0x0!2s750+Centerview+Blvd%2C+Kissimmee%2C+FL+34741" width="100%" height="450" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
-        <!-- Book Appointment -->
+        <!-- Appointment -->
         <div class="section" id="appointment">
             <h2>Book an Appointment</h2>
-            <div class="card" style="padding:30px;">
+            <div class="card">
                 <form action="https://formspree.io/f/xrevzbaa" method="POST">
                     <input type="text" name="child-name" placeholder="Child's Full Name" required>
                     <input type="email" name="email" placeholder="Parent Email" required>
@@ -133,19 +148,5 @@
         <p>&copy; 2026 Nemours Children Healthcare - Kissimmee, Florida</p>
         <p>Phone: +1 (725) 882 8892 | Email: nemourschildrenhealthcare@gmail.com</p>
     </footer>
-
-    <script>
-        let currentSlide = 0;
-        const slider = document.getElementById('slider');
-        const slides = slider.children.length;
-
-        function moveSlide(direction) {
-            currentSlide = (currentSlide + direction + slides) % slides;
-            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-
-        // Auto slide every 5 seconds
-        setInterval(() => moveSlide(1), 5000);
-    </script>
 </body>
 </html>
