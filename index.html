@@ -6,29 +6,29 @@
     <title>Nemours Children Healthcare - Florida</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; background: #f9f9f9; line-height: 1.7; }
-        header { background: #26A69A; color: white; padding: 20px; text-align: center; }
-        .logo { width: 220px; height: auto; margin: 10px auto; display: block; border-radius: 12px; }
+        header { background: #26A69A; color: white; padding: 15px 20px; text-align: center; position: relative; }
+        .logo { width: 200px; height: auto; border-radius: 8px; }
+        .menu-icon { position: absolute; right: 20px; top: 20px; font-size: 32px; cursor: pointer; color: white; }
         
-        /* Mobile Menu */
-        .menu-icon { font-size: 30px; cursor: pointer; float: right; margin-top: -40px; }
-        nav { background: #1e8a7f; padding: 15px; text-align: center; display: none; }
-        nav a { color: white; display: block; padding: 10px; text-decoration: none; font-weight: bold; }
+        nav { background: #1e8a7f; display: none; padding: 15px; }
+        nav a { color: white; display: block; padding: 12px; text-decoration: none; font-weight: bold; }
         
-        h1 { font-size: 2.4em; margin: 10px 0; }
+        h1 { font-size: 2.3em; margin: 10px 0; }
         h2 { color: #26A69A; border-bottom: 3px solid #26A69A; padding-bottom: 12px; }
         .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         .section { margin: 60px 0; padding: 35px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
         
-        /* Sliding Gallery */
+        /* Side Sliding Gallery */
         .slider-container { position: relative; overflow: hidden; border-radius: 12px; margin: 20px 0; }
         .slider { display: flex; transition: transform 0.6s ease; }
         .slider img { min-width: 100%; height: 420px; object-fit: cover; }
         .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.7); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 24px; cursor: pointer; z-index: 10; }
         .prev { left: 15px; } .next { right: 15px; }
 
-        .btn { background: #FF5722; color: white; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; }
-        input, textarea, select { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
-        footer { background: #26A69A; color: white; text-align: center; padding: 50px 20px; }
+        .btn { background: #FF5722; color: white; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px 0; width: 100%; text-align: center; }
+        input, textarea { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; }
+        footer { background: #26A69A; color: white; text-align: center; padding: 40px 20px; font-size: 0.9em; }
+        .social a { font-size: 24px; margin: 0 10px; color: white; }
     </style>
 </head>
 <body>
@@ -40,7 +40,7 @@
         <span class="menu-icon" onclick="toggleMenu()">☰</span>
     </header>
 
-    <nav id="nav-menu">
+    <nav id="navMenu">
         <a href="#vision">Vision</a>
         <a href="#research">Research</a>
         <a href="#gallery">Gallery</a>
@@ -56,16 +56,21 @@
         <div class="section" id="vision">
             <h2>Our Vision: Well Beyond Medicine</h2>
             <p><strong>World-class care is only part of the solution. Children need so much more.</strong></p>
-            <p>Going Well Beyond Medicine. About 80% of what affects a child’s health takes place in their home, school and community.</p>
+            <p>Going Well Beyond Medicine</p>
+            <p>About 80% of what affects a child’s health takes place in their home, school and community. Nemours Children’s is making a difference with programs that address nonmedical challenges — to create a healthier future, for all kids.</p>
+            <p><strong>Reimagining Children’s Health</strong><br>We’re transforming the idea of what it takes to keep children well, beyond medicine.</p>
+            <p><strong>Collaboration Is Key</strong><br>Creating healthier generations of children depends on strategic partnerships.</p>
+            <p><strong>Leadership in Children’s Health</strong><br>Nemours is a thought leader in transforming children’s health care.</p>
         </div>
 
         <!-- Research -->
         <div class="section" id="research">
             <h2>Pediatric Research</h2>
             <p><strong>At Nemours Children’s, research goes beyond discovery to drive impact.</strong> We study what makes children sick, what helps them heal, and what gives every child the best chance to thrive.</p>
+            <p>Life-Changing Research Happens Here. We focus on cancer, diabetes, heart disease, mental health, and everyday factors that shape children’s well-being.</p>
         </div>
 
-        <!-- Side Sliding Gallery -->
+        <!-- Gallery -->
         <div class="section" id="gallery">
             <h2>Our Hospital Campus</h2>
             <div class="slider-container">
@@ -85,11 +90,14 @@
 
         <!-- Location -->
         <div class="section" id="location">
-            <h2>Our Location</h2>
-            <p><strong>Nemours Children's Health, Osceola - Urgent Care</strong><br>
-            750 Centerview Blvd<br>
-            Kissimmee, FL 34741, United States</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.5!2d-81.432!3d28.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b5b5b5b5b5b5%3A0x0!2s750+Centerview+Blvd%2C+Kissimmee%2C+FL+34741" width="100%" height="450" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+            <h2>Our Locations</h2>
+            <p><strong>1. Osceola - Urgent Care</strong><br>
+            750 Centerview Blvd, Kissimmee, FL 34741</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.5!2d-81.432!3d28.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b5b5b5b5b5b5%3A0x0!2s750+Centerview+Blvd%2C+Kissimmee%2C+FL+34741" width="100%" height="300" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+
+            <p style="margin-top:30px;"><strong>2. Lake Nona - Primary Care</strong><br>
+            6718 Lake Nona Blvd Suite 270, Orlando, FL 32827</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.8!2d-81.262!3d28.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b5b5b5b5b5b5%3A0x0!2s6718+Lake+Nona+Blvd%2C+Orlando%2C+FL+32827" width="100%" height="300" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
         <!-- Create Account -->
@@ -99,7 +107,7 @@
                 <form action="https://formspree.io/f/xrevzbaa" method="POST">
                     <input type="text" name="full-name" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Email Address" required>
-                    <button type="submit" class="btn" style="width:100%;">Create Account</button>
+                    <button type="submit" class="btn">Create Account</button>
                 </form>
             </div>
         </div>
@@ -108,11 +116,11 @@
         <div class="section" id="donate">
             <h2>Make a Donation</h2>
             <div class="card" style="padding:30px;">
-                <p>Your generous donation helps us provide excellent care.</p>
+                <p>Your generous donation helps us provide life-changing care to children.</p>
                 <p><strong>🔒 Secured Payment:</strong> All donations are encrypted and safe.</p>
                 <form action="https://formspree.io/f/xrevzbaa" method="POST">
                     <input type="number" name="amount" placeholder="Donation Amount ($)" required>
-                    <button type="submit" class="btn" style="width:100%;">Donate Securely</button>
+                    <button type="submit" class="btn">Donate Securely</button>
                 </form>
             </div>
         </div>
@@ -125,30 +133,41 @@
                     <input type="text" name="child-name" placeholder="Child's Full Name" required>
                     <input type="email" name="email" placeholder="Parent Email" required>
                     <input type="tel" name="phone" placeholder="Phone Number" required>
-                    <button type="submit" class="btn" style="width:100%;">Submit Appointment Request</button>
+                    <button type="submit" class="btn">Submit Appointment Request</button>
                 </form>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Nemours Children Healthcare - Kissimmee, Florida</p>
+        <p>&copy; 2026 Nemours Children Healthcare - Florida</p>
         <p>Phone: +1 (725) 882 8892 | Email: nemourschildrenhealthcare@gmail.com</p>
+        
+        <div style="margin:20px 0;">
+            <a href="#" class="social">𝕏</a>
+            <a href="#" class="social">📘</a>
+            <a href="#" class="social">📷</a>
+            <a href="#" class="social">🎵</a>
+        </div>
+
+        <p>
+            <a href="#">WHO WE ARE</a> | 
+            <a href="#">LEGAL & PRIVACY</a> | 
+            <a href="#">Careers</a> | 
+            <a href="#">Contact Us</a>
+        </p>
     </footer>
 
     <script>
-        // Mobile Menu
         function toggleMenu() {
-            var nav = document.getElementById('nav-menu');
-            nav.style.display = (nav.style.display === 'block') ? 'none' : 'block';
+            var menu = document.getElementById('navMenu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
 
-        // Side Sliding Gallery
         let currentSlide = 0;
-        const slider = document.getElementById('slider');
         function moveSlide(n) {
             currentSlide = (currentSlide + n + 7) % 7;
-            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            document.getElementById('slider').style.transform = `translateX(-${currentSlide * 100}%)`;
         }
         setInterval(() => moveSlide(1), 5000);
     </script>
