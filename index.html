@@ -5,157 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemours Children Healthcare - Florida</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            color: #333; 
-            background: #f9f9f9;
-            line-height: 1.6;
-        }
-        header { 
-            background: #26A69A; 
-            color: white; 
-            padding: 40px 20px; 
-            text-align: center; 
-        }
-        .logo {
-            width: 260px;
-            height: auto;
-            margin: 10px auto 15px;
-            display: block;
-            border-radius: 8px;
-        }
-        h1 { font-size: 2.4em; margin: 5px 0; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; background: #f9f9f9; line-height: 1.6; }
+        header { background: #26A69A; color: white; padding: 20px; text-align: center; }
+        .logo { width: 220px; height: auto; margin: 10px auto; display: block; border-radius: 8px; }
+        nav { background: #1e8a7f; padding: 12px; text-align: center; overflow-x: auto; white-space: nowrap; }
+        nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; }
+        h1 { font-size: 2.4em; margin: 10px 0; }
         h2 { color: #26A69A; border-bottom: 3px solid #26A69A; padding-bottom: 10px; }
-        
         .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         .section { margin: 60px 0; }
-        .services, .facilities { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { 
-            background: white; 
-            padding: 25px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-            border-left: 5px solid #26A69A;
-        }
-        .btn { 
-            display: inline-block; 
-            background: #FF5722;   /* Bright Orange - Very Visible */
-            color: white; 
-            padding: 16px 32px; 
-            border-radius: 50px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-size: 1.1em;
-            margin-top: 20px; 
-            box-shadow: 0 4px 12px rgba(255,87,34,0.3);
-        }
-        .btn:hover { background: #E64A19; }
-        
-        .appointment-form {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 700px;
-            margin: 30px auto;
-        }
-        input, textarea, select {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-        .map-container {
-            position: relative;
-            padding-bottom: 75%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        footer { 
-            background: #26A69A; 
-            color: white; 
-            text-align: center; 
-            padding: 40px 20px; 
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 2em; }
-            .logo { width: 220px; }
-        }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+        .gallery img { width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.3s; }
+        .gallery img:hover { transform: scale(1.03); }
+        .btn { background: #FF5722; color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; }
+        input, textarea, select { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; }
+        footer { background: #26A69A; color: white; text-align: center; padding: 40px 20px; }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="IMG_20260601_142949_177.png" alt="Nemours Children Healthcare Logo" class="logo">
+        <img src="IMG_20260601_142949_177.png" alt="Nemours Logo" class="logo">
         <h1>Nemours Children Healthcare</h1>
-        <p style="font-size: 1.4em;">Compassionate Care for Children in Florida</p>
+        <p>Compassionate Care for Children in Florida</p>
         <a href="#appointment" class="btn">Book Appointment</a>
     </header>
 
+    <nav>
+        <a href="#gallery">Hospital Gallery</a>
+        <a href="#account">Create Account</a>
+        <a href="#donate">Donate</a>
+        <a href="#appointment">Book Appointment</a>
+    </nav>
+
     <div class="container">
-        <div class="section">
-            <h2>Welcome to Our Children's Hospital</h2>
-            <p>We are a dedicated pediatric healthcare center in Kissimmee, Florida, providing high-quality, compassionate medical care for children.</p>
-        </div>
 
-        <div class="section">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="card"><h3>General Pediatrics</h3><p>Routine check-ups, vaccinations, and treatment of childhood illnesses.</p></div>
-                <div class="card"><h3>Emergency & Urgent Care</h3><p>24/7 pediatric emergency and urgent care services.</p></div>
-                <div class="card"><h3>Specialist Clinics</h3><p>Cardiology, Neurology, Nutrition & more.</p></div>
+        <!-- Hospital Gallery -->
+        <div class="section" id="gallery">
+            <h2>Our Beautiful Hospital Campus</h2>
+            <div class="gallery">
+                <img src="IMG-20260603-WA0001.jpg" alt="Nemours Hospital">
+                <img src="IMG-20260603-WA0002.jpg" alt="Hospital View">
+                <img src="IMG-20260603-WA0003.jpg" alt="Hospital Exterior">
+                <img src="IMG-20260603-WA0004.jpg" alt="Nemours Building">
+                <img src="IMG-20260603-WA0005.jpg" alt="Campus View">
+                <img src="IMG-20260603-WA0006.jpg" alt="Modern Facility">
+                <img src="IMG-20260603-WA0007.jpg" alt="Hospital Entrance">
             </div>
         </div>
 
-        <div class="section">
-            <h2>Our Facilities & Child-Friendly Environment</h2>
-            <div class="facilities">
-                <div class="card"><h3>Play Areas & Entertainment</h3><p>Colorful playrooms and interactive zones.</p></div>
-                <div class="card"><h3>Family-Centered Care</h3><p>Comfortable spaces for parents.</p></div>
-                <div class="card"><h3>Modern Equipment</h3><p>State-of-the-art pediatric technology.</p></div>
+        <!-- Create Account -->
+        <div class="section" id="account">
+            <h2>Create Patient Account</h2>
+            <div class="card">
+                <form action="https://formspree.io/f/xrevzbaa" method="POST">
+                    <input type="text" name="full-name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" name="phone" placeholder="Phone Number">
+                    <textarea name="message" placeholder="Additional Information" rows="3"></textarea>
+                    <button type="submit" class="btn" style="width:100%;">Create My Account</button>
+                </form>
             </div>
         </div>
 
-        <div class="section">
-            <h2>Our Location</h2>
-            <p><strong>📍 Nemours Children's Health, Osceola</strong><br>
-            750 Centerview Blvd, Kissimmee, FL 34741, United States</p>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.5!2d-81.432!3d28.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b5b5b5b5b5b5%3A0x0!2s750+Centerview+Blvd%2C+Kissimmee%2C+FL+34741!5e0!3m2!1sen!2sus!4v1710000000000" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <!-- Donate -->
+        <div class="section" id="donate">
+            <h2>Make a Donation</h2>
+            <div class="card">
+                <p>Your support helps us continue providing excellent care to children and families.</p>
+                <p><strong>🔒 100% Secured Payment</strong></p>
+                <form action="https://formspree.io/f/xrevzbaa" method="POST">
+                    <input type="number" name="donation-amount" placeholder="Donation Amount ($)" required>
+                    <input type="text" name="donor-name" placeholder="Your Name" required>
+                    <input type="email" name="donor-email" placeholder="Your Email" required>
+                    <button type="submit" class="btn" style="width:100%;">Donate Securely Now</button>
+                </form>
             </div>
         </div>
 
+        <!-- Appointment -->
         <div class="section" id="appointment">
             <h2>Book an Appointment</h2>
-            <div class="appointment-form">
+            <div class="card">
                 <form action="https://formspree.io/f/xrevzbaa" method="POST">
                     <input type="text" name="child-name" placeholder="Child's Full Name" required>
                     <input type="number" name="child-age" placeholder="Child's Age" required>
-                    <input type="text" name="parent-name" placeholder="Parent/Guardian Name" required>
-                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <input type="email" name="email" placeholder="Parent Email" required>
                     <input type="tel" name="phone" placeholder="Phone Number" required>
-                    <select name="service" required>
-                        <option value="">Select Service Needed</option>
-                        <option value="General Pediatrics">General Pediatrics</option>
-                        <option value="Urgent Care">Urgent Care</option>
-                        <option value="Specialist Clinic">Specialist Clinic</option>
-                        <option value="Vaccination">Vaccination</option>
-                    </select>
-                    <input type="date" name="preferred-date" required>
-                    <textarea name="message" placeholder="Reason for Visit / Additional Information" rows="4"></textarea>
                     <button type="submit" class="btn" style="width:100%;">Submit Appointment Request</button>
                 </form>
             </div>
@@ -164,8 +101,7 @@
 
     <footer>
         <p>&copy; 2026 Nemours Children Healthcare - Kissimmee, Florida</p>
-        <p>Phone: +1 (725) 882 8892</p>
-        <p>Email: nemourschildrenhealthcare@gmail.com</p>
+        <p>Phone: +1 (725) 882 8892 | Email: nemourschildrenhealthcare@gmail.com</p>
     </footer>
 </body>
 </html>
