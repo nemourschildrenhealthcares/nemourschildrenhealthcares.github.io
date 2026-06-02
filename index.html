@@ -15,9 +15,8 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         .section { margin: 60px 0; }
         .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
-        .gallery img { width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.3s; }
-        .gallery img:hover { transform: scale(1.03); }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        .gallery img { width: 100%; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
         .btn { background: #FF5722; color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; }
         input, textarea, select { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; }
         footer { background: #26A69A; color: white; text-align: center; padding: 40px 20px; }
@@ -33,6 +32,7 @@
     </header>
 
     <nav>
+        <a href="#vision">Our Vision</a>
         <a href="#gallery">Hospital Gallery</a>
         <a href="#account">Create Account</a>
         <a href="#donate">Donate</a>
@@ -40,6 +40,26 @@
     </nav>
 
     <div class="container">
+
+        <!-- Our Vision -->
+        <div class="section" id="vision">
+            <h2>Our Vision: Well Beyond Medicine</h2>
+            <p><strong>World-class care is only part of the solution. Children need so much more.</strong></p>
+            <p>Going Well Beyond Medicine</p>
+            <p>About 80% of what affects a child’s health takes place in their home, school and community. Nemours Children’s is making a difference with programs that address nonmedical challenges — to create a healthier future, for all kids.</p>
+            
+            <p><strong>Reimagining Children’s Health</strong><br>
+            We’re transforming the idea of what it takes to keep children well, beyond medicine. Besides providing world-class clinical care, we’re addressing the social, economic, behavioral and environmental factors that affect kids every day.</p>
+
+            <p><strong>Collaboration Is Key</strong><br>
+            Creating healthier generations of children depends on strategic partnerships with parents, employers, community groups, government agencies and others.</p>
+
+            <p><strong>Health Is More Than Health Care</strong><br>
+            We’re advocating for health reforms, raising awareness of the issues facing young people and advancing policies with lasting impact for generations to come.</p>
+
+            <p><strong>Leadership in Children’s Health</strong><br>
+            Nemours is a thought leader in transforming children’s health care.</p>
+        </div>
 
         <!-- Hospital Gallery -->
         <div class="section" id="gallery">
@@ -63,7 +83,6 @@
                     <input type="text" name="full-name" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Email Address" required>
                     <input type="tel" name="phone" placeholder="Phone Number">
-                    <textarea name="message" placeholder="Additional Information" rows="3"></textarea>
                     <button type="submit" class="btn" style="width:100%;">Create My Account</button>
                 </form>
             </div>
@@ -73,11 +92,11 @@
         <div class="section" id="donate">
             <h2>Make a Donation</h2>
             <div class="card">
-                <p>Your support helps us continue providing excellent care to children and families.</p>
-                <p><strong>🔒 100% Secured Payment</strong></p>
+                <p>Your generous donation helps us provide life-changing care to children and families.</p>
+                <p><strong>🔒 How to Make a Secured Payment:</strong> All donations are processed through encrypted, PCI-compliant secure payment systems. Your information is fully protected.</p>
                 <form action="https://formspree.io/f/xrevzbaa" method="POST">
                     <input type="number" name="donation-amount" placeholder="Donation Amount ($)" required>
-                    <input type="text" name="donor-name" placeholder="Your Name" required>
+                    <input type="text" name="donor-name" placeholder="Your Full Name" required>
                     <input type="email" name="donor-email" placeholder="Your Email" required>
                     <button type="submit" class="btn" style="width:100%;">Donate Securely Now</button>
                 </form>
@@ -90,7 +109,6 @@
             <div class="card">
                 <form action="https://formspree.io/f/xrevzbaa" method="POST">
                     <input type="text" name="child-name" placeholder="Child's Full Name" required>
-                    <input type="number" name="child-age" placeholder="Child's Age" required>
                     <input type="email" name="email" placeholder="Parent Email" required>
                     <input type="tel" name="phone" placeholder="Phone Number" required>
                     <button type="submit" class="btn" style="width:100%;">Submit Appointment Request</button>
