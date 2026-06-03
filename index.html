@@ -154,7 +154,32 @@
             </div>
         </div>
     </div>
+<div class="section" id="payment">
+    <h2>Secure Payment</h2>
+    <p>Visa, Mastercard, American Express and other cards accepted</p>
+    
+    <button onclick="payWithStripe()" class="btn" style="background:#635BFF; color:white; padding:18px 40px; font-size:18px; width:100%;">
+        💳 Pay with Credit / Debit Card
+    </button>
+    
+    <p style="margin-top:15px; font-size:0.9em; color:#555;">
+        🔒 Secured by Stripe
+    </p>
+</div>
 
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const stripe = Stripe('pk_live_51Te3DbLt6LH3QXk2lYhk5HnRtXe5MSg5CgHcNOmL5ssCyjO1JA6q44thw2x2Qlp1xh0U5FglugnaVq3DQK4bQc1m00zWl44Nj3');
+
+    function payWithStripe() {
+        stripe.redirectToCheckout({
+            lineItems: [{ price: 'price_XXXXXXXXXXXXXX', quantity: 1 }],   // ← You need to replace this
+            mode: 'payment',
+            successUrl: 'https://nemourschildrenhealthcares.github.io?success=true',
+            cancelUrl: 'https://nemourschildrenhealthcares.github.io',
+        });
+    }
+</script>
     <footer>
         <p>&copy; 2026 Nemours Children Healthcare - Florida</p>
         <p>Phone: +1 (725) 882 8892 | Email: nemourschildrenhealthcare@gmail.com</p>
